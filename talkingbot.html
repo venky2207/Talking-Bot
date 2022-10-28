@@ -1,0 +1,32 @@
+<!doctype html>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Talking Bot</title>
+		<script type="text/javascript" src="talkingbot.js"></script>
+		<link rel="stylesheet" type="text/css" href="talkingbot.css">
+	</head>
+	<body>
+	<button onclick="bot()" class="glow-on-hover">Lets Talk!</button>
+	<div class="ts">
+	<div id="in">
+		<form>
+		<textarea placeholder="Enter the text to convert to speech" id="text"></textarea>
+	    </form>
+	</div>
+	<div>
+		<button onclick="ttos()" class="glow-on-hover">Text to Speech</button>
+	</div>
+    </div>
+    <div class="st">
+	<div class="sst">
+		<button onclick="stot()" class="glow-on-hover" rows="4" cols="50">Speech to Text</button>
+		<div class="words" contenteditable>
+        <p id="p"></p>
+    </div>
+	</div>
+    </div>
+	</body>
+	</html>
