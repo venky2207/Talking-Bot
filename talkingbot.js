@@ -10,7 +10,7 @@ recognition.onresult= function(event){
 	console.log(event);
 	const spokenwords = event.results[0][0].transcript;
 	console.log(spokenwords);
-	computerspeech(spokenwords);
+	computerspeech(spokenwords.toLowerCase());
 }
 
 function bot(){
@@ -31,10 +31,7 @@ function determine(speech,words){
 	if(words.includes("hello")){
 		speech.text = "hello";
 	}
-	if(words.includes("Hello")){
-		speech.text = "hello";
-	}
-	if(words.includes("open Google")){
+	if(words.includes("open google")){
 		speech.text = "opening google for you";
 		window.open("https://www.google.com/");
 	}
@@ -49,11 +46,11 @@ function determine(speech,words){
 	if(words.includes("tell me a joke")){
 		speech.text = "you are a joke why a joke for you ha ha ha ";
 	}
-	if(words.includes("open YouTube")){
+	if(words.includes("open youtube")){
 		speech.text = "opening youtube";
 		window.open("https://youtube.com/");
 	}
-	if(words.includes("open Github")){
+	if(words.includes("open github")){
 		speech.text = "why github without any reps anyway opening github";
 		window.open("https://github.com/");
 	}
